@@ -1,0 +1,88 @@
+#each joint name reffers to a joint motor
+#motion names reffers to the motions which we can perform using these motors
+#each motion has step value for each motor 
+
+#motor_1: 109: left hand shouler lift(moving hand towards or away from body)
+#motor_2: 106: left hand roll in vertical plane 
+#motor_3: 108: left hand yaw about axix through the hand
+#motor_4: 107: left hand elbow joint lift
+
+
+myjoints:
+ names: [joint1,joint2,joint3,joint4,joint5]
+ joint1:
+    names: [motor_1]
+    motion:
+      names: [l_1, l_2]
+      l_1:
+        step: [-10]  # raised hand side ways
+        time_from_start: 4.0  # sec
+      l_2:
+        step: [2] #hand at rest 
+        time_from_start: 7.0
+ joint2:
+    names: [motor_2]
+    motion:
+      names: [m_1, m_2, m_3,m_4]
+      m_1:
+        step: [-49]  # radian this one was good 
+        time_from_start: 10.0  # sec
+      m_2:
+        step: [0] 
+        time_from_start: 20.0
+      m_3:
+        step: [43]
+        time_from_start: 30.0
+      m_4:
+        step: [0]
+        time_from_start: 40.0
+ joint3:
+    names: [motor_4]
+    motion:
+      names: [m_5,m_6]
+      m_5:
+        step: [-5.747]  # radian
+        time_from_start: 4.0  # sec
+      m_6:
+        step: [4.669]
+        time_from_start: 8.0
+ joint4:
+    names: [motor_3]
+    motion:
+      names: [m_7,m_8,m_9,m_10]
+      m_7:
+        step: [66]  # radian
+        time_from_start: 10.0  # sec
+      m_8:
+        step: [6]
+        time_from_start: 20.0
+      m_9:
+        step: [-26]
+        time_from_start: 26.0
+      m_10:
+        step: [6]
+        time_from_start: 32.0
+ joint5:
+    names: [motor_1,motor_3,motor_4]
+    motion:
+      names: [m_11,m_12,m_13,m_14,m_15]
+      m_11:
+        step: [-10,-26,4.669]  # radian
+        time_from_start: 4.0  # sec
+      m_12:
+        step: [-10,-26,-5.747]
+        time_from_start: 6.0
+      m_13:
+        step: [-10,-26,4.669]
+        time_from_start: 8.0
+      m_14:
+        step: [-10,-26,-5.747]
+        time_from_start: 10.0
+      m_15:
+        step: [2,6,4.669]
+        time_from_start: 14.0
+      
+   
+
+  
+#so here all three motors will move -3.14 radians from initial position in 2 seconds then to 0 radians and then to +3.14 radians 

@@ -1,0 +1,28 @@
+#motor_1: left hand shouler lift(moving hand towards or away from body)
+#motor_2: left hand roll in vertical plane 
+#motor_3: left hand yaw about axix through the hand
+#motor_4: left hand elbow joint lift
+motor_1:
+  ID: 109
+  Return_Delay_Time: 0
+  Operating_Mode: 4
+  Profile_Acceleration: 0
+  Profile_Velocity: 0
+motor_2:
+  ID: 106
+  Return_Delay_Time: 0
+  Operating_Mode: 4
+  Profile_Acceleration: 0
+  Profile_Velocity: 0
+motor_3:
+  ID: 108
+  Return_Delay_Time: 0
+  Operating_Mode: 4
+  Profile_Acceleration: 0
+  Profile_Velocity: 0
+motor_4:
+  ID: 107
+  Return_Delay_Time: 0
+  Operating_Mode: 4
+  Profile_Acceleration: 0
+  Profile_Velocity: 0

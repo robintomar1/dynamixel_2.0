@@ -1,0 +1,12 @@
+<launch>
+  <arg name="namespace"               default="dynamixel_workbench"/>
+  <arg name="is_loop"               default="false"/>
+<node name ="intro_publisher" pkg="dynamixel_workbench_operators" type="intro_publisher"/>
+  <node name ="joint_operator_action" pkg="dynamixel_workbench_operators" type="joint_operator_action">
+        required="true" output="screen" ns="$(arg namespace)">
+    <param name="is_loop" value="$(arg is_loop)"/>
+  </node>
+     <node name ="joint_action_client" pkg="dynamixel_workbench_operators" type="joint_action_client"/> 
+     <node name ="trigger_catcher_mqtt" pkg="dynamixel_workbench_operators" type="trigger_catcher_mqtt.py"/> 
+      
+</launch>
